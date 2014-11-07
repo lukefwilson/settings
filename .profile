@@ -4,16 +4,13 @@ Cyan='\e[0;36m'
 BGreen='\e[1;32m'
 White='\e[0;37m'
 
-# boxen ish
-source /opt/boxen/env.sh
-
 # git auto completion
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
+if [ -f ~/profile/.git-completion.bash ]; then
+  . ~/profile..git-completion.bash
 fi
 
 # to show git branch in prompt
-source ~/.git-prompt.sh
+source ~/profile/.git-prompt.sh
 
 # function to print shorter working path directory
 MYPSDIR_AWK=$(cat << 'EOF'
@@ -30,4 +27,4 @@ EOF
 export MYPSDIR='$(echo -n "${PWD/#$HOME/~}" | awk "$MYPSDIR_AWK")'
 
 # bash prompt
-export PS1="\[$BGreen\]\t-\u\[$Cyan\] $(eval 'echo ${MYPSDIR}')\[\033[m\]\[$Purple\]\$(__git_ps1)\[$White\]\$ "
+export PS1="\[$BGreen\]\t ⚡ \u\[$Cyan\] $(eval 'echo ${MYPSDIR}')\[\033[m\]\[$Purple\]\$(__git_ps1)\[$White\]\$ "
