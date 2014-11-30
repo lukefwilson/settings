@@ -50,7 +50,7 @@ git_prompt () {
 }
 
 
-PROMPT_COMMAND='PS1="$(colored_time)⚡ \u${c_cyan} $(shorten_path "\w" 20)${c_purple}\$(git_prompt)${c_reset} > "'
+PROMPT_COMMAND='PS1="$(colored_time)⚡️ \u${c_cyan} $(shorten_path "\w" 20)${c_purple}\$(git_prompt)${c_reset} \n${c_green_bold}>${c_reset} "'
 
 # always show ls with colors, including hidden, and humanized size
 export LSCOLORS=GxBxhxDxdxxahadadaeaea
